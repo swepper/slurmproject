@@ -16,4 +16,11 @@ spec:
             name: ingress-test-1
             port:
               number: 80
+      - path: /2
+        pathType: Prefix
+        backend:
+          service:
+            name: ingress-test-2
+            port:
+              number: 80
 ...
