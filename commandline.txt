@@ -1,0 +1,33 @@
+cd /srv 
+git clone https://github.com/kubernetes-sigs/kubespray -b release-2.26
+
+cd /srv/kubespray
+pip3 install -r requirements.txt
+
+cd /srv/kubespray/inventory
+
+cp -r sample s065965
+
+cd s065965
+
+vi inventory.ini
+--------------
+
+vi group_vars/all/containerd.yml
+
+В файле group_vars/all/etcd.yml :
+etcd_deployment_type: kubeadm
+
+vi group_vars/all/etcd.yml
+
+vi group_vars/k8s_cluster/k8s-cluster.yml
+
+vi group_vars/k8s_cluster/addons.yml
+
+cd /srv/kubespray/inventory/group_vars
+
+vi kube_ingress.yml
+
+cd /srv/kubespray
+
+kubectl apply -f deployment.yaml
