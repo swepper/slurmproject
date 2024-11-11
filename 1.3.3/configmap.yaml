@@ -12,6 +12,6 @@ data:
         default_type text/plain;
 
         location / {
-            return 200 'I am ${VER}\n';
+            return 200 'I am xxx\n';
         }
     }
