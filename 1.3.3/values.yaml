@@ -275,20 +275,15 @@ hostAliases: []
 
 ingress:
   enabled: true
-  className: "nginx"
+  ingressClassName: nginx
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
-  #labels: {}
-  #path: /
 
-  # pathType is only for k8s >= 1.1=
-  pathType: Prefix
   hosts:
     - host: grafana.s065965.edu.slurm.io
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
+  path: /
+    pathType: ImplementationSpecific
   ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
   #extraPaths: []
   # - path: /*
