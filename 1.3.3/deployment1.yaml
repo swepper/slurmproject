@@ -16,7 +16,7 @@ spec:
   template:
     metadata:
       labels:
-        app: my-app
+        app: my-app1
     spec:
       containers:
         - image: nginx:1.22
