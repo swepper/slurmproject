@@ -21,9 +21,6 @@ spec:
       containers:
         - image: nginx:1.22
           name: nginx
-          env:
-          - name: VER
-            value: "1.22"
           ports:
             - containerPort: 80
           readinessProbe:
@@ -56,4 +53,4 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: my-configmap
+            name: my-configmap1

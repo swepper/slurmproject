@@ -56,4 +56,4 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: my-configmap
+            name: my-configmap2
