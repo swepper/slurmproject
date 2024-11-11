@@ -22,7 +22,7 @@ spec:
         - image: nginx:1.22
           name: nginx
           env:
-          - name: ver
+          - name: VER
             value: "1.22"
           ports:
             - containerPort: 80
