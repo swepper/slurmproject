@@ -21,7 +21,8 @@ spec:
       containers:
       - image: debian:stable
         name: debian
-		command: sh -c 'while true; do echo "Hello, ${USERNAME}!"; sleep 10; done'
+		command: ["/bin/sh"]
+        args: ["-c", "while true; do echo "Hello, ${USERNAME}!"; sleep 10; done"]
         env:
         - name: USERNAME
           value: s065965		
